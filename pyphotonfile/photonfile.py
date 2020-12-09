@@ -74,11 +74,11 @@ def imgarr_to_rle(imgarr):
 
 def image_to_imgarr(filepath):
     """
-    Loads an image from disk and returns a numpy array. Raises ValueError if the image does not have the correct resolution of 1440x2560.
+    Loads an image from disk and returns a numpy array. Raises ValueError if the image does not have the correct resolution of 1620x2560.
     """
     imgarr = Image.open(filepath).convert('L')
-    if not (imgarr.width, imgarr.height) == (1440, 2560):
-        raise ValueError("Your image dimensions are off and should be 1440x2560")
+    if not (imgarr.width, imgarr.height) == (1620, 2560):
+        raise ValueError("Your image dimensions are off and should be 1620x2560")
     imgarr = np.array(imgarr)
     return imgarr
 
